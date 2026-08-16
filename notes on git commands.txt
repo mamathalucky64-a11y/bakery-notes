@@ -1,0 +1,166 @@
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git init
+Initialized empty Git repository in C:/Users/mamat/OneDrive/Desktop/startupistan-practice/.git/
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> touch bakery-notes.txt
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and 
+try again.
+At line:1 char:1
++ touch bakery-notes.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bakery-notes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add . 
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   bakery-notes.txt
+
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   bakery-notes.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git commit -m "fixed typo in bakery notes"
+[main (root-commit) 9a44700] fixed typo in bakery notes
+ 1 file changed, 3 insertions(+)
+ create mode 100644 bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git commit -m "Fixed names and added additional details"                              
+[main 712d9e8] Fixed names and added additional details
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> 
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git commit -m "Added additional details"        
+[main 0430570] Added additional details
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git commit --amend -m "Added email id and days"
+[main 3eb0660] Added email id and days
+ Date: Tue Aug 4 18:16:58 2026 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .    
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git commit -m "Added special offers for kids"
+[main e4ef979] Added special offers for kids
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git log --oneline
+e4ef979 (HEAD -> main) Added special offers for kids
+3eb0660 Added email id and days
+712d9e8 Fixed names and added additional details
+9a44700 fixed typo in bakery notes
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> cat bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git restore bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> 
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   bakery-notes.txt
+
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git restore bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> cat bakery-notes.txt        
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status                  
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   bakery-notes.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .                   
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> cat bakery-notes.txt
+abcd
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git add .           
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> cat bakery-notes.txt
+
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status          
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   bakery-notes.txt
+
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git restore bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git restore --staged bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice>  cat bakery-notes.txt                           
+                                      
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice>  cat bakery-notes.txt
+Sara's  Bekary
+weekend special : mohn brot
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bakery-notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice> git restore bakery-notes.txt
+PS C:\Users\mamat\OneDrive\Desktop\startupistan-practice>   
